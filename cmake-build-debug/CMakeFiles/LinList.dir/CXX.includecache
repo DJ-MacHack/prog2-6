@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/DJ MacHack/Dropbox/htw/ss17/Prog 2/Aufgaben/6/prog2-6/LinList.cpp
+LinList.h
+C:/Users/DJ MacHack/Dropbox/htw/ss17/Prog 2/Aufgaben/6/prog2-6/LinList.h
+
+C:/Users/DJ MacHack/Dropbox/htw/ss17/Prog 2/Aufgaben/6/prog2-6/LinList.h
+ListElement.h
+C:/Users/DJ MacHack/Dropbox/htw/ss17/Prog 2/Aufgaben/6/prog2-6/ListElement.h
+
+C:/Users/DJ MacHack/Dropbox/htw/ss17/Prog 2/Aufgaben/6/prog2-6/LinListTst.cpp
+iostream
+-
+LinList.h
+C:/Users/DJ MacHack/Dropbox/htw/ss17/Prog 2/Aufgaben/6/prog2-6/LinList.h
+
+C:/Users/DJ MacHack/Dropbox/htw/ss17/Prog 2/Aufgaben/6/prog2-6/ListElement.cpp
+ListElement.h
+C:/Users/DJ MacHack/Dropbox/htw/ss17/Prog 2/Aufgaben/6/prog2-6/ListElement.h
+
+C:/Users/DJ MacHack/Dropbox/htw/ss17/Prog 2/Aufgaben/6/prog2-6/ListElement.h
+string
+-
+

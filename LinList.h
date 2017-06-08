@@ -24,6 +24,8 @@ public:
 	void push_front(InhaltTyp t);
 	void pop_back();
 	void pop_front();
+	ListElement* get_End() const;
+	ListElement* get_First() const;
 	friend ostream& operator<< (ostream&, const LinList&);
 private:
 	size_t size;

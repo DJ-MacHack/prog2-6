@@ -21,7 +21,7 @@ typedef string InhaltTyp;
  */
 class ListElement {
 public:
-	ListElement(InhaltTyp, ListElement* =0, ListElement* =0);
+	ListElement(InhaltTyp, ListElement* front, ListElement* next);
 	~ListElement();
 	friend class LinList;
 private:

@@ -8,96 +8,96 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="D:/Users/DJ MacHack/Dropbox/htw/ss17/Prog 2/Aufgaben/6/LinList/cmake-build-debug"/>
+				<Option working_dir="C:/Users/DJ MacHack/Dropbox/htw/ss17/Prog 2/Aufgaben/6/prog2-6/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="D:/MinGW/bin/mingw32-make.exe -f &quot;D:/Users/DJ MacHack/Dropbox/htw/ss17/Prog 2/Aufgaben/6/LinList/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="D:/MinGW/bin/mingw32-make.exe -f &quot;D:/Users/DJ MacHack/Dropbox/htw/ss17/Prog 2/Aufgaben/6/LinList/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="D:/MinGW/bin/mingw32-make.exe -f &quot;D:/Users/DJ MacHack/Dropbox/htw/ss17/Prog 2/Aufgaben/6/LinList/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="D:/MinGW/bin/mingw32-make.exe -f &quot;D:/Users/DJ MacHack/Dropbox/htw/ss17/Prog 2/Aufgaben/6/LinList/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/DJ MacHack/Dropbox/htw/ss17/Prog 2/Aufgaben/6/prog2-6/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/DJ MacHack/Dropbox/htw/ss17/Prog 2/Aufgaben/6/prog2-6/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/DJ MacHack/Dropbox/htw/ss17/Prog 2/Aufgaben/6/prog2-6/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/DJ MacHack/Dropbox/htw/ss17/Prog 2/Aufgaben/6/prog2-6/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="D:/Users/DJ MacHack/Dropbox/htw/ss17/Prog 2/Aufgaben/6/LinList/cmake-build-debug"/>
+				<Option working_dir="C:/Users/DJ MacHack/Dropbox/htw/ss17/Prog 2/Aufgaben/6/prog2-6/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="D:/MinGW/bin/mingw32-make.exe -f &quot;D:/Users/DJ MacHack/Dropbox/htw/ss17/Prog 2/Aufgaben/6/LinList/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="D:/MinGW/bin/mingw32-make.exe -f &quot;D:/Users/DJ MacHack/Dropbox/htw/ss17/Prog 2/Aufgaben/6/LinList/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="D:/MinGW/bin/mingw32-make.exe -f &quot;D:/Users/DJ MacHack/Dropbox/htw/ss17/Prog 2/Aufgaben/6/LinList/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="D:/MinGW/bin/mingw32-make.exe -f &quot;D:/Users/DJ MacHack/Dropbox/htw/ss17/Prog 2/Aufgaben/6/LinList/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/DJ MacHack/Dropbox/htw/ss17/Prog 2/Aufgaben/6/prog2-6/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/DJ MacHack/Dropbox/htw/ss17/Prog 2/Aufgaben/6/prog2-6/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/DJ MacHack/Dropbox/htw/ss17/Prog 2/Aufgaben/6/prog2-6/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/DJ MacHack/Dropbox/htw/ss17/Prog 2/Aufgaben/6/prog2-6/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="LinList">
-				<Option output="D:/Users/DJ MacHack/Dropbox/htw/ss17/Prog 2/Aufgaben/6/LinList/cmake-build-debug/LinList.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="D:/Users/DJ MacHack/Dropbox/htw/ss17/Prog 2/Aufgaben/6/LinList/cmake-build-debug"/>
+				<Option output="C:/Users/DJ MacHack/Dropbox/htw/ss17/Prog 2/Aufgaben/6/prog2-6/cmake-build-debug/LinList.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/DJ MacHack/Dropbox/htw/ss17/Prog 2/Aufgaben/6/prog2-6/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="d:\mingw\bin\../lib/gcc/mingw32/5.3.0/include"/>
-					<Add directory="d:\mingw\bin\../lib/gcc/mingw32/5.3.0/../../../../include"/>
-					<Add directory="d:\mingw\bin\../lib/gcc/mingw32/5.3.0/include-fixed"/>
-					<Add directory="d:\mingw\bin\../lib/gcc/mingw32/5.3.0/../../../../mingw32/include"/>
-					<Add directory="d:\mingw\bin\../lib/gcc/mingw32/5.3.0/include/c++"/>
-					<Add directory="d:\mingw\bin\../lib/gcc/mingw32/5.3.0/include/c++/mingw32"/>
-					<Add directory="d:\mingw\bin\../lib/gcc/mingw32/5.3.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include-fixed"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/../../../../mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="D:/MinGW/bin/mingw32-make.exe -f &quot;D:/Users/DJ MacHack/Dropbox/htw/ss17/Prog 2/Aufgaben/6/LinList/cmake-build-debug/Makefile&quot;  VERBOSE=1 LinList"/>
-					<CompileFile command="D:/MinGW/bin/mingw32-make.exe -f &quot;D:/Users/DJ MacHack/Dropbox/htw/ss17/Prog 2/Aufgaben/6/LinList/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="D:/MinGW/bin/mingw32-make.exe -f &quot;D:/Users/DJ MacHack/Dropbox/htw/ss17/Prog 2/Aufgaben/6/LinList/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="D:/MinGW/bin/mingw32-make.exe -f &quot;D:/Users/DJ MacHack/Dropbox/htw/ss17/Prog 2/Aufgaben/6/LinList/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/DJ MacHack/Dropbox/htw/ss17/Prog 2/Aufgaben/6/prog2-6/cmake-build-debug/Makefile&quot;  VERBOSE=1 LinList"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/DJ MacHack/Dropbox/htw/ss17/Prog 2/Aufgaben/6/prog2-6/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/DJ MacHack/Dropbox/htw/ss17/Prog 2/Aufgaben/6/prog2-6/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/DJ MacHack/Dropbox/htw/ss17/Prog 2/Aufgaben/6/prog2-6/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="LinList/fast">
-				<Option output="D:/Users/DJ MacHack/Dropbox/htw/ss17/Prog 2/Aufgaben/6/LinList/cmake-build-debug/LinList.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="D:/Users/DJ MacHack/Dropbox/htw/ss17/Prog 2/Aufgaben/6/LinList/cmake-build-debug"/>
+				<Option output="C:/Users/DJ MacHack/Dropbox/htw/ss17/Prog 2/Aufgaben/6/prog2-6/cmake-build-debug/LinList.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/DJ MacHack/Dropbox/htw/ss17/Prog 2/Aufgaben/6/prog2-6/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="d:\mingw\bin\../lib/gcc/mingw32/5.3.0/include"/>
-					<Add directory="d:\mingw\bin\../lib/gcc/mingw32/5.3.0/../../../../include"/>
-					<Add directory="d:\mingw\bin\../lib/gcc/mingw32/5.3.0/include-fixed"/>
-					<Add directory="d:\mingw\bin\../lib/gcc/mingw32/5.3.0/../../../../mingw32/include"/>
-					<Add directory="d:\mingw\bin\../lib/gcc/mingw32/5.3.0/include/c++"/>
-					<Add directory="d:\mingw\bin\../lib/gcc/mingw32/5.3.0/include/c++/mingw32"/>
-					<Add directory="d:\mingw\bin\../lib/gcc/mingw32/5.3.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include-fixed"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/../../../../mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="D:/MinGW/bin/mingw32-make.exe -f &quot;D:/Users/DJ MacHack/Dropbox/htw/ss17/Prog 2/Aufgaben/6/LinList/cmake-build-debug/Makefile&quot;  VERBOSE=1 LinList/fast"/>
-					<CompileFile command="D:/MinGW/bin/mingw32-make.exe -f &quot;D:/Users/DJ MacHack/Dropbox/htw/ss17/Prog 2/Aufgaben/6/LinList/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="D:/MinGW/bin/mingw32-make.exe -f &quot;D:/Users/DJ MacHack/Dropbox/htw/ss17/Prog 2/Aufgaben/6/LinList/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="D:/MinGW/bin/mingw32-make.exe -f &quot;D:/Users/DJ MacHack/Dropbox/htw/ss17/Prog 2/Aufgaben/6/LinList/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/DJ MacHack/Dropbox/htw/ss17/Prog 2/Aufgaben/6/prog2-6/cmake-build-debug/Makefile&quot;  VERBOSE=1 LinList/fast"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/DJ MacHack/Dropbox/htw/ss17/Prog 2/Aufgaben/6/prog2-6/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/DJ MacHack/Dropbox/htw/ss17/Prog 2/Aufgaben/6/prog2-6/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/DJ MacHack/Dropbox/htw/ss17/Prog 2/Aufgaben/6/prog2-6/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="D:/Users/DJ MacHack/Dropbox/htw/ss17/Prog 2/Aufgaben/6/LinList/cmake-build-debug"/>
+				<Option working_dir="C:/Users/DJ MacHack/Dropbox/htw/ss17/Prog 2/Aufgaben/6/prog2-6/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="D:/MinGW/bin/mingw32-make.exe -f &quot;D:/Users/DJ MacHack/Dropbox/htw/ss17/Prog 2/Aufgaben/6/LinList/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="D:/MinGW/bin/mingw32-make.exe -f &quot;D:/Users/DJ MacHack/Dropbox/htw/ss17/Prog 2/Aufgaben/6/LinList/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="D:/MinGW/bin/mingw32-make.exe -f &quot;D:/Users/DJ MacHack/Dropbox/htw/ss17/Prog 2/Aufgaben/6/LinList/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="D:/MinGW/bin/mingw32-make.exe -f &quot;D:/Users/DJ MacHack/Dropbox/htw/ss17/Prog 2/Aufgaben/6/LinList/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/DJ MacHack/Dropbox/htw/ss17/Prog 2/Aufgaben/6/prog2-6/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/DJ MacHack/Dropbox/htw/ss17/Prog 2/Aufgaben/6/prog2-6/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/DJ MacHack/Dropbox/htw/ss17/Prog 2/Aufgaben/6/prog2-6/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/DJ MacHack/Dropbox/htw/ss17/Prog 2/Aufgaben/6/prog2-6/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="D:/Users/DJ MacHack/Dropbox/htw/ss17/Prog 2/Aufgaben/6/LinList/LinList.cpp">
+		<Unit filename="C:/Users/DJ MacHack/Dropbox/htw/ss17/Prog 2/Aufgaben/6/prog2-6/LinList.cpp">
 			<Option target="LinList"/>
 		</Unit>
-		<Unit filename="D:/Users/DJ MacHack/Dropbox/htw/ss17/Prog 2/Aufgaben/6/LinList/LinList.h">
+		<Unit filename="C:/Users/DJ MacHack/Dropbox/htw/ss17/Prog 2/Aufgaben/6/prog2-6/LinList.h">
 			<Option target="LinList"/>
 		</Unit>
-		<Unit filename="D:/Users/DJ MacHack/Dropbox/htw/ss17/Prog 2/Aufgaben/6/LinList/LinListTst.cpp">
+		<Unit filename="C:/Users/DJ MacHack/Dropbox/htw/ss17/Prog 2/Aufgaben/6/prog2-6/LinListTst.cpp">
 			<Option target="LinList"/>
 		</Unit>
-		<Unit filename="D:/Users/DJ MacHack/Dropbox/htw/ss17/Prog 2/Aufgaben/6/LinList/ListElement.cpp">
+		<Unit filename="C:/Users/DJ MacHack/Dropbox/htw/ss17/Prog 2/Aufgaben/6/prog2-6/ListElement.cpp">
 			<Option target="LinList"/>
 		</Unit>
-		<Unit filename="D:/Users/DJ MacHack/Dropbox/htw/ss17/Prog 2/Aufgaben/6/LinList/ListElement.h">
+		<Unit filename="C:/Users/DJ MacHack/Dropbox/htw/ss17/Prog 2/Aufgaben/6/prog2-6/ListElement.h">
 			<Option target="LinList"/>
 		</Unit>
-		<Unit filename="D:/Users/DJ MacHack/Dropbox/htw/ss17/Prog 2/Aufgaben/6/LinList/CMakeLists.txt">
+		<Unit filename="C:/Users/DJ MacHack/Dropbox/htw/ss17/Prog 2/Aufgaben/6/prog2-6/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>
