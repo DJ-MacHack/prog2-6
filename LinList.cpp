@@ -15,18 +15,23 @@ LinList::LinList() {
 }
 
 LinList::~LinList() {
-	// TODO Auto-generated destructor stub
+	size_t tmp = this->size;
+	for(size_t i = 0; i < tmp; i++){
+		pop_front();
+	}
 }
 
 void LinList::push_back(InhaltTyp t) {
 	ListElement* tmp = new ListElement(t, this->get_End(),nullptr);
+	this->get_End()->next = tmp;
 	this->size++;
 	this->last = tmp;
 }
 
 void LinList::push_front(InhaltTyp t) {
 	ListElement* tmp = new ListElement(t, nullptr, this->get_First());
-	this->size--;
+	this->get_First()->previous = tmp;
+	this->size++;
 	this->first = tmp;
 }
 
@@ -54,4 +59,6 @@ ListElement* LinList::get_First() const {
 	return this->first;
 }
 
-
+ostream &operator<<(ostream & stream, const LinList &) {
+	return stream;
+}
