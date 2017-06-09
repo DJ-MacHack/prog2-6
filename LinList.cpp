@@ -39,6 +39,11 @@ void LinList::pop_back() {
 }
 
 void LinList::pop_front() {
+	this->size--;
+	ListElement* newFirst = this->get_First()->next;
+	delete(this->get_First());
+	this->first = newFirst;
+	this->first->previous= nullptr;
 }
 
 ListElement* LinList::get_End() const {
