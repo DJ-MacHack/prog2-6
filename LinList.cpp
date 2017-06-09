@@ -59,6 +59,19 @@ ListElement* LinList::get_First() const {
 	return this->first;
 }
 
-ostream &operator<<(ostream & stream, const LinList &) {
+void LinList::insert(int stelle, InhaltTyp input){
+
+}
+
+void LinList::erase(int stelle){
+
+}
+
+void LinList::clear() {
+	delete this;
+}
+
+
+ostream& LinList::operator<<(ostream & stream, const LinList &) {
 	return stream;
 }
