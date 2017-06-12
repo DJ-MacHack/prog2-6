@@ -19,6 +19,7 @@
 class LinList {
 public:
 	LinList();
+    LinList(const LinList& list);
 	~LinList();
 	void push_back (InhaltTyp t);
 	void push_front(InhaltTyp t);
@@ -26,12 +27,14 @@ public:
 	void pop_front();
 	ListElement* get_End() const;
 	ListElement* get_First() const;
+    ListElement* get(int stelle) const;
 	friend ostream& operator<< (ostream& stream, const LinList&);
-    void insert(int stelle, InthaltTyp input);
+    void insert(int stelle, InhaltTyp input);
     void erase(int stelle);
     void clear();
 private:
 	size_t size;
+    void check(bool x, exception e);
 	ListElement* first;
 	ListElement* last;
 };

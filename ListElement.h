@@ -22,6 +22,8 @@ typedef string InhaltTyp;
 class ListElement {
 public:
 	ListElement(InhaltTyp, ListElement* front, ListElement* next);
+    ListElement(const ListElement& element);
+    InhaltTyp getInhalt() const;
 	~ListElement();
 	friend class LinList;
 private:

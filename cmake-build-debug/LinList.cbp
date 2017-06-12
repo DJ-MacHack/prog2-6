@@ -91,6 +91,12 @@
 		<Unit filename="C:/Users/DJ MacHack/Dropbox/htw/ss17/Prog 2/Aufgaben/6/prog2-6/LinListTst.cpp">
 			<Option target="LinList"/>
 		</Unit>
+		<Unit filename="C:/Users/DJ MacHack/Dropbox/htw/ss17/Prog 2/Aufgaben/6/prog2-6/ListDialog.cpp">
+			<Option target="LinList"/>
+		</Unit>
+		<Unit filename="C:/Users/DJ MacHack/Dropbox/htw/ss17/Prog 2/Aufgaben/6/prog2-6/ListDialog.h">
+			<Option target="LinList"/>
+		</Unit>
 		<Unit filename="C:/Users/DJ MacHack/Dropbox/htw/ss17/Prog 2/Aufgaben/6/prog2-6/ListElement.cpp">
 			<Option target="LinList"/>
 		</Unit>

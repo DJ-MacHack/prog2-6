@@ -8,6 +8,18 @@
 #include "LinList.h"
 
 
+class LeereException : public exception {
+    virtual const char *what() const throw() {
+        return "Leere Liste!";
+    }
+} leeresListeExp;
+
+class stellenException : public exception {
+    virtual const char *what() const throw() {
+        return "Liste ist zu klein!";
+    }
+} stellenExp;
+
 LinList::LinList() {
 	this->first = nullptr;
 	this->last = nullptr;
@@ -36,6 +48,7 @@ void LinList::push_front(InhaltTyp t) {
 }
 
 void LinList::pop_back() {
+    check(this->size < 1, leeresListeExp);
 	this->size--;
 	ListElement* newEnd = this->get_End()->previous;
 	delete(this->get_End());
@@ -44,6 +57,7 @@ void LinList::pop_back() {
 }
 
 void LinList::pop_front() {
+    check(this->size < 1, leeresListeExp);
 	this->size--;
 	ListElement* newFirst = this->get_First()->next;
 	delete(this->get_First());
@@ -60,10 +74,44 @@ ListElement* LinList::get_First() const {
 }
 
 void LinList::insert(int stelle, InhaltTyp input){
+    if(stelle == 1){
+        push_front(input);
+    } else {
+        ListElement* tmp = this->first->next;
+        for(int i = 2; i < stelle; i++){
+            tmp = tmp->next;
+        }
+        ListElement* in = new ListElement(input, tmp->previous, tmp);
+        tmp->previous->next = in;
+        tmp->previous = in;
+        this->size++;
+    }
+}
 
+ListElement* LinList::get(int stelle) const {
+    if(stelle==1){
+        return this->first;
+    }
+    if(stelle == static_cast<int>(this->size)) {
+        return this->last;
+    }
+    ListElement* tmp = this->first->next;
+    for(int i = 2; i < stelle; i++){
+        tmp = tmp->next;
+    }
+    return tmp;
 }
 
 void LinList::erase(int stelle){
+    check(static_cast<size_t>(stelle) > this->size, stellenExp);
+    ListElement* tmp = this->first;
+    for(int i = 1; i < stelle; i++){
+        tmp = tmp->next;
+    }
+    this->size--;
+    tmp->previous->next= tmp->next;
+    tmp->next->previous = tmp->previous;
+    delete(tmp);
 
 }
 
@@ -72,6 +120,12 @@ void LinList::clear() {
 }
 
 
-ostream& LinList::operator<<(ostream & stream, const LinList &) {
+ostream& operator<<(ostream& stream, const LinList&) {
 	return stream;
+}
+
+void LinList::check(bool x, exception e){
+    if(x){
+        throw e;
+    }
 }

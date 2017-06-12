@@ -2,6 +2,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/LinList.dir/LinList.cpp.obj"
   "CMakeFiles/LinList.dir/LinListTst.cpp.obj"
   "CMakeFiles/LinList.dir/ListElement.cpp.obj"
+  "CMakeFiles/LinList.dir/ListDialog.cpp.obj"
   "LinList.pdb"
   "LinList.exe"
   "LinList.exe.manifest"

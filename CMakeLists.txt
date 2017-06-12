@@ -8,6 +8,6 @@ set(SOURCE_FILES
     LinList.h
     LinListTst.cpp
     ListElement.cpp
-    ListElement.h)
+    ListElement.h ListDialog.cpp ListDialog.h)
 
 add_executable(LinList ${SOURCE_FILES})

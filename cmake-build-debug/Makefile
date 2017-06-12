@@ -176,6 +176,33 @@ LinListTst.cpp.s:
 	$(MAKE) -f CMakeFiles\LinList.dir\build.make CMakeFiles/LinList.dir/LinListTst.cpp.s
 .PHONY : LinListTst.cpp.s
 
+ListDialog.obj: ListDialog.cpp.obj
+
+.PHONY : ListDialog.obj
+
+# target to build an object file
+ListDialog.cpp.obj:
+	$(MAKE) -f CMakeFiles\LinList.dir\build.make CMakeFiles/LinList.dir/ListDialog.cpp.obj
+.PHONY : ListDialog.cpp.obj
+
+ListDialog.i: ListDialog.cpp.i
+
+.PHONY : ListDialog.i
+
+# target to preprocess a source file
+ListDialog.cpp.i:
+	$(MAKE) -f CMakeFiles\LinList.dir\build.make CMakeFiles/LinList.dir/ListDialog.cpp.i
+.PHONY : ListDialog.cpp.i
+
+ListDialog.s: ListDialog.cpp.s
+
+.PHONY : ListDialog.s
+
+# target to generate assembly for a file
+ListDialog.cpp.s:
+	$(MAKE) -f CMakeFiles\LinList.dir\build.make CMakeFiles/LinList.dir/ListDialog.cpp.s
+.PHONY : ListDialog.cpp.s
+
 ListElement.obj: ListElement.cpp.obj
 
 .PHONY : ListElement.obj
@@ -218,6 +245,9 @@ help:
 	@echo ... LinListTst.obj
 	@echo ... LinListTst.i
 	@echo ... LinListTst.s
+	@echo ... ListDialog.obj
+	@echo ... ListDialog.i
+	@echo ... ListDialog.s
 	@echo ... ListElement.obj
 	@echo ... ListElement.i
 	@echo ... ListElement.s
