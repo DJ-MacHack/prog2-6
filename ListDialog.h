@@ -22,6 +22,8 @@ public:
     FunktionsTyp einlesenFunktion();
     void ausfuehrenFunktion(FunktionsTyp funktion);
 
+    virtual ~ListDialog();
+
 
 private:
     std::vector<LinList*> vec;

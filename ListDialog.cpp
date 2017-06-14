@@ -9,6 +9,12 @@
 #include <iostream>
 #include "ListDialog.h"
 
+ListDialog::~ListDialog() {
+    for(int i = 0; i < this->vec.size(); i++){
+        delete(this->vec.at(i));
+    }
+}
+
 ListDialog::ListDialog() {
     this->vec.push_back(new LinList());
     this->listcount++;
@@ -69,10 +75,10 @@ void ListDialog::ausfuehrenFunktion(FunktionsTyp funktion) {
             cout << "Neue Liste im Vector an Stelle " << this->listcount-1 << endl;
             break;
         case ELEMENT_EINFUEGEN:
-            cout << "Listennummer: ";
+            cout << "Listennummer (0 bis n): ";
             cin >> n;
             cout << endl;
-            cout << "Listenposition: ";
+            cout << "Listenposition (1 bis n): ";
             cin >> m;
             cout << endl;
             cout << "Inhalt: ";
@@ -82,40 +88,40 @@ void ListDialog::ausfuehrenFunktion(FunktionsTyp funktion) {
             cout << "Element eingefuegt!" << endl;
             break;
         case ELEMENT_KOPIEREN:
-            cout << "Listennummer aus der kopiert wird: ";
+            cout << "Listennummer aus der kopiert wird (0 bis n): ";
             cin >> n;
             cout << endl;
-            cout << "Listenposition des Elements das kopiert wird: ";
+            cout << "Listenposition des Elements das kopiert wird (1 bis n): ";
             cin >> m;
             cout << endl;
-            cout << "Listennummer in die kopiert wird: ";
+            cout << "Listennummer in die kopiert wird (0 bis n): ";
             cin >> p;
             cout << endl;
-            cout << "Listenposition des Elements das kopiert wird: ";
+            cout << "Listenposition des Elements das kopiert wird (1 bis n): ";
             cin >> q;
             cout << endl;
-            this->vec.at(p)->insert(q, (this->vec.at(n)->get(m)->getInhalt()));
+            this->vec.at(p)->insert(q, (this->vec.at(n)->get(m)->inhalt));
             cout << "Element kopiert!" << endl;
             break;
         case ELEMENT_LOESCHEN:
-            cout << "Listennummer des Elements: ";
+            cout << "Listennummer des Elements (0 bis n): ";
             cin >> n;
             cout << endl;
-            cout << "Listenposition des Elements das geloescht wird: ";
+            cout << "Listenposition des Elements das geloescht wird (1 bis n): ";
             cin >> m;
             cout << endl;
             this->vec.at(n)->erase(m);
             cout << "Element geloescht!" << endl;
             break;
         case LISTE_KOPIEREN:
-            cout << "Listennummer der Liste: ";
+            cout << "Listennummer der Liste (0 bis n): ";
             cin >> n;
             this->vec.push_back(new LinList(*this->vec.at(n)));
             this->listcount++;
             cout << "Liste wurde kopiert mit Nummer " << this->listcount << endl;
             break;
         case LISTE_LOESCHEN:
-            cout << "Listennummer die geloescht wird: ";
+            cout << "Listennummer die geloescht wird (0 bis n): ";
             cin >> n;
             cout << endl;
             this->vec.at(n)->clear();

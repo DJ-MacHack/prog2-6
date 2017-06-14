@@ -25,6 +25,11 @@ public:
 	void push_front(InhaltTyp t);
 	void pop_back();
 	void pop_front();
+    ListElement* operator[](int stelle);
+    void operator+ (LinList liste);
+    LinList operator+= (LinList liste);
+    bool operator== (LinList liste);
+    bool operator!= (LinList liste);
 	ListElement* get_End() const;
 	ListElement* get_First() const;
     ListElement* get(int stelle) const;

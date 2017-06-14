@@ -19,6 +19,20 @@ iostream
 -
 LinList.h
 C:/Users/DJ MacHack/Dropbox/htw/ss17/Prog 2/Aufgaben/6/prog2-6/LinList.h
+ListDialog.h
+C:/Users/DJ MacHack/Dropbox/htw/ss17/Prog 2/Aufgaben/6/prog2-6/ListDialog.h
+
+C:/Users/DJ MacHack/Dropbox/htw/ss17/Prog 2/Aufgaben/6/prog2-6/ListDialog.cpp
+iostream
+-
+ListDialog.h
+C:/Users/DJ MacHack/Dropbox/htw/ss17/Prog 2/Aufgaben/6/prog2-6/ListDialog.h
+
+C:/Users/DJ MacHack/Dropbox/htw/ss17/Prog 2/Aufgaben/6/prog2-6/ListDialog.h
+vector
+-
+LinList.h
+C:/Users/DJ MacHack/Dropbox/htw/ss17/Prog 2/Aufgaben/6/prog2-6/LinList.h
 
 C:/Users/DJ MacHack/Dropbox/htw/ss17/Prog 2/Aufgaben/6/prog2-6/ListElement.cpp
 ListElement.h

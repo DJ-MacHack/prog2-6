@@ -33,18 +33,33 @@ LinList::~LinList() {
 	}
 }
 
+LinList::LinList(const LinList &list) {
+
+}
 void LinList::push_back(InhaltTyp t) {
 	ListElement* tmp = new ListElement(t, this->get_End(),nullptr);
-	this->get_End()->next = tmp;
-	this->size++;
-	this->last = tmp;
+    if(this->size == 0) {
+        this->first = tmp;
+        this->last = tmp;
+        this->size++;
+    } else {
+        this->get_End()->next = tmp;
+        this->size++;
+        this->last = tmp;
+    }
 }
 
 void LinList::push_front(InhaltTyp t) {
 	ListElement* tmp = new ListElement(t, nullptr, this->get_First());
-	this->get_First()->previous = tmp;
-	this->size++;
-	this->first = tmp;
+    if(this->size == 0) {
+        this->first = tmp;
+        this->last = tmp;
+        this->size++;
+    } else {
+        this->get_First()->previous = tmp;
+        this->size++;
+        this->first = tmp;
+    }
 }
 
 void LinList::pop_back() {
@@ -62,7 +77,9 @@ void LinList::pop_front() {
 	ListElement* newFirst = this->get_First()->next;
 	delete(this->get_First());
 	this->first = newFirst;
-	this->first->previous= nullptr;
+    if(this->size >= 1) {
+        this->first->previous = nullptr;
+    }
 }
 
 ListElement* LinList::get_End() const {
@@ -77,14 +94,18 @@ void LinList::insert(int stelle, InhaltTyp input){
     if(stelle == 1){
         push_front(input);
     } else {
-        ListElement* tmp = this->first->next;
-        for(int i = 2; i < stelle; i++){
-            tmp = tmp->next;
+        if(static_cast<size_t>(stelle) > this->size) {
+            push_back(input);
+        } else {
+            ListElement *tmp = this->first->next;
+            for (int i = 2; i < stelle; i++) {
+                tmp = tmp->next;
+            }
+            ListElement *in = new ListElement(input, tmp->previous, tmp);
+            tmp->previous->next = in;
+            tmp->previous = in;
+            this->size++;
         }
-        ListElement* in = new ListElement(input, tmp->previous, tmp);
-        tmp->previous->next = in;
-        tmp->previous = in;
-        this->size++;
     }
 }
 
@@ -102,6 +123,38 @@ ListElement* LinList::get(int stelle) const {
     return tmp;
 }
 
+ListElement* LinList::operator[](int stelle) {
+    return get(stelle);
+}
+
+void LinList::operator+(LinList liste) {
+    this->last->next = liste.first;
+    liste.first->previous = this->last;
+    this->last = liste.last;
+    liste.first = this->first;
+}
+
+LinList LinList::operator+=(LinList liste) {
+    *this+liste;
+    return *this;
+}
+
+bool LinList::operator==(LinList liste) {
+    if(this->size != liste.size){
+        return false;
+    }
+    for(size_t i = 1; i <= this->size; i++) {
+        if(this->get(i)->inhalt != liste.get(i)->inhalt) {
+            return false;
+        }
+    }
+    return true;
+}
+
+bool LinList::operator!=(LinList liste) {
+    return !(*this==liste);
+}
+
 void LinList::erase(int stelle){
     check(static_cast<size_t>(stelle) > this->size, stellenExp);
     ListElement* tmp = this->first;
@@ -112,7 +165,6 @@ void LinList::erase(int stelle){
     tmp->previous->next= tmp->next;
     tmp->next->previous = tmp->previous;
     delete(tmp);
-
 }
 
 void LinList::clear() {
@@ -121,6 +173,7 @@ void LinList::clear() {
 
 
 ostream& operator<<(ostream& stream, const LinList&) {
+    //todo
 	return stream;
 }
 

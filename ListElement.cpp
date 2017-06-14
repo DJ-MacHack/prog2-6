@@ -19,10 +19,6 @@ ListElement::ListElement(const ListElement &element) {
 
 }
 
-InhaltTyp ListElement::getInhalt() const {
-    return this->inhalt;
-}
-
 ListElement::~ListElement() {
 	// TODO Auto-generated destructor stub
 }

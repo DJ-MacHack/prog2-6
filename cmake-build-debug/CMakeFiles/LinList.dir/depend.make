@@ -7,7 +7,13 @@ CMakeFiles/LinList.dir/LinList.cpp.obj: ../ListElement.h
 
 CMakeFiles/LinList.dir/LinListTst.cpp.obj: ../LinList.h
 CMakeFiles/LinList.dir/LinListTst.cpp.obj: ../LinListTst.cpp
+CMakeFiles/LinList.dir/LinListTst.cpp.obj: ../ListDialog.h
 CMakeFiles/LinList.dir/LinListTst.cpp.obj: ../ListElement.h
+
+CMakeFiles/LinList.dir/ListDialog.cpp.obj: ../LinList.h
+CMakeFiles/LinList.dir/ListDialog.cpp.obj: ../ListDialog.cpp
+CMakeFiles/LinList.dir/ListDialog.cpp.obj: ../ListDialog.h
+CMakeFiles/LinList.dir/ListDialog.cpp.obj: ../ListElement.h
 
 CMakeFiles/LinList.dir/ListElement.cpp.obj: ../ListElement.cpp
 CMakeFiles/LinList.dir/ListElement.cpp.obj: ../ListElement.h
