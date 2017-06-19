@@ -3,6 +3,8 @@
  * @file	ListElement.h
  * @author	folz
  * @date	20.05.2012
+ * mail@hendrik-haas.de
+ * Partner: Julian Bruna
  */
 
 #ifndef LISTELEMENT_H_

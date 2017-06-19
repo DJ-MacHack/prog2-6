@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/DJ MacHack/Dropbox/htw/ss17/Prog 2/Aufgaben/6/prog2-6
+# Install script for directory: D:/Users/DJ MacHack/Dropbox/htw/ss17/Prog 2/Aufgaben/6/prog2-6
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -35,5 +35,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/DJ MacHack/Dropbox/htw/ss17/Prog 2/Aufgaben/6/prog2-6/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "D:/Users/DJ MacHack/Dropbox/htw/ss17/Prog 2/Aufgaben/6/prog2-6/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

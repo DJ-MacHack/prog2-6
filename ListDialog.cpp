@@ -4,29 +4,44 @@
 * @date: 12.06.2017.
 * Matrnr.: 3747719
 * mail@hendrik-haas.de
+* Partner: Julian Bruna
 */
+
 
 #include <iostream>
 #include "ListDialog.h"
 
+/**
+ * destructor
+ */
 ListDialog::~ListDialog() {
     for(int i = 0; i < this->vec.size(); i++){
         delete(this->vec.at(i));
     }
 }
 
+/**
+ * constructor
+ */
 ListDialog::ListDialog() {
     this->vec.push_back(new LinList());
     this->listcount++;
     cout << "Neue Liste im Vector an Stelle " << this->listcount-1 << endl;
 }
 
+/**
+ * dialog
+ * @param list
+ */
 ListDialog::ListDialog(LinList *list) {
     this->vec.push_back(list);
     this->listcount++;
     cout << "Neue Liste im Vector an Stelle " << this->listcount-1 << endl;
 }
 
+/**
+ * main dialog function
+ */
 void ListDialog::start() {
     FunktionsTyp funktion;
     do {
@@ -42,10 +57,14 @@ void ListDialog::start() {
             cout << "Unbekannter Fehler Ausfuehren!" << endl;
         }
 
-    } while (funktion != ENDE);
+    } while (funktion != ENDE || funktion != LISTE_LOESCHEN);
 
 }
 
+/**
+ * reads input of your choice
+ * @return
+ */
 FunktionsTyp ListDialog::einlesenFunktion() {
     cout << LISTE_ANLEGEN << ": Liste anlegen; "
          << ELEMENT_EINFUEGEN << ": Element in die Liste einfuegen; "
@@ -66,6 +85,10 @@ FunktionsTyp ListDialog::einlesenFunktion() {
     }
 }
 
+/**
+ * executes functions
+ * @param funktion
+ */
 void ListDialog::ausfuehrenFunktion(FunktionsTyp funktion) {
     std::string inhalt = "";
     int n, m, p, q;
@@ -141,7 +164,6 @@ void ListDialog::ausfuehrenFunktion(FunktionsTyp funktion) {
             cin >> n;
             cout << "Listennummer die addiert wird (0 bis n): ";
             cin >> m;
-            //r = (*(this->vec.at(n)) + *(this->vec.at(m)));
             this->vec.push_back(&(*(this->vec.at(n)) + *(this->vec.at(m))));
             this->listcount++;
             vecout();
@@ -154,6 +176,9 @@ void ListDialog::ausfuehrenFunktion(FunktionsTyp funktion) {
     }
 }
 
+/**
+ * reads vector
+ */
 void ListDialog::vecout(){
     for (int i = 0; i < this->listcount ; ++i) {
         cout << "Liste " << i << endl;

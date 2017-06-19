@@ -1,10 +1,3 @@
-/**
- * 
- * @file	LinList.h
- * @author	folz
- * @date	20.05.2012
- */
-
 #ifndef LINLIST_H_
 #define LINLIST_H_
 #include "ListElement.h"
@@ -15,11 +8,16 @@
  * @author	folz
  * @version 
  * @date	20.05.2012
+ * mail@hendrik-haas.de
+ * Partner: Julian Bruna
  */
+
 class LinList {
 	friend bool operator== (const LinList& liste, const LinList& zweite);
 	friend bool operator!= (const LinList& liste, const LinList& zweite);
 	friend LinList& operator+ (const LinList& liste, const LinList& zweite);
+    friend class ListElement;
+
 public:
 	LinList();
     LinList(const LinList& list);
@@ -37,15 +35,11 @@ public:
     void insert(int stelle, InhaltTyp input);
     void erase(int stelle);
     void clear();
-
 	void setFirst(ListElement *first);
-
 	void setLast(ListElement *last);
 
-	friend class ListElement;
 private:
 	size_t size;
-    void check(bool x, exception e);
 	ListElement* first;
 	ListElement* last;
 };

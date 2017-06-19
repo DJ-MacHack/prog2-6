@@ -3,12 +3,16 @@
  * @file	LinList.cpp
  * @author	folz
  * @date	20.05.2012
+ * mail@hendrik-haas.de
+ * Partner: Julian Bruna
  */
 
 #include <iostream>
 #include "LinList.h"
 
-
+/**
+ * exceptions
+ */
 class leereException : public exception {
     virtual const char *what() const throw() {
         return "Leere Liste!";
@@ -27,12 +31,18 @@ class outOfBoundsException : public exception {
     }
 } outOfBoundsExp;
 
+/**
+ * default constructor
+ */
 LinList::LinList() {
 	this->first = nullptr;
 	this->last = nullptr;
 	this->size = 0;
 }
 
+/**
+ * destructor
+ */
 LinList::~LinList() {
 	size_t tmp = this->size;
 	for(size_t i = 0; i < tmp; i++){
@@ -40,6 +50,10 @@ LinList::~LinList() {
 	}
 }
 
+/**
+ * copy constructor
+ * @param list
+ */
 LinList::LinList(const LinList &list) {
     this->size=0;
     this->first = nullptr;
@@ -48,6 +62,11 @@ LinList::LinList(const LinList &list) {
         this->insert(i, list.get(i)->getInhalt());
     }
 }
+
+/**
+ * push back
+ * @param t
+ */
 void LinList::push_back(InhaltTyp t) {
 	ListElement* tmp = new ListElement(t, this->get_End(),nullptr);
     if(this->size == 0) {
@@ -61,6 +80,10 @@ void LinList::push_back(InhaltTyp t) {
     }
 }
 
+/**
+ * push front
+ * @param t
+ */
 void LinList::push_front(InhaltTyp t) {
 	ListElement* tmp = new ListElement(t, nullptr, this->get_First());
     if(this->size == 0) {
@@ -74,6 +97,9 @@ void LinList::push_front(InhaltTyp t) {
     }
 }
 
+/**
+ * pop back
+ */
 void LinList::pop_back() {
     if(this->size < 1) {
         throw leeresListeExp;
@@ -87,6 +113,9 @@ void LinList::pop_back() {
     }
 }
 
+/**
+ * pop front
+ */
 void LinList::pop_front() {
     if(this->size < 1) {
         throw leeresListeExp;
@@ -100,14 +129,27 @@ void LinList::pop_front() {
     }
 }
 
+/**
+ * getter last
+ * @return
+ */
 ListElement* LinList::get_End() const {
 	return this->last;
 }
 
+/**
+ * getter first
+ * @return
+ */
 ListElement* LinList::get_First() const {
 	return this->first;
 }
 
+/**
+ * optimized insert
+ * @param stelle
+ * @param input
+ */
 void LinList::insert(int stelle, InhaltTyp input){
     if(stelle == 1){
         push_front(input);
@@ -131,6 +173,11 @@ void LinList::insert(int stelle, InhaltTyp input){
     }
 }
 
+/**
+ * optimized get at
+ * @param stelle
+ * @return
+ */
 ListElement* LinList::get(int stelle) const {
     if(stelle > this->size || stelle  < 1 ){
         throw outOfBoundsExp;
@@ -148,35 +195,52 @@ ListElement* LinList::get(int stelle) const {
     return tmp;
 }
 
+/**
+ * get at
+ * @param stelle
+ * @return
+ */
 ListElement* LinList::operator[](int stelle) {
     return get(stelle);
 }
 
+/**
+ * set first
+ * @param first
+ */
 void LinList::setFirst(ListElement *first) {
     this->first = first;
 }
 
+/**
+ * set last
+ * @param last
+ */
 void LinList::setLast(ListElement *last) {
     this->last = last;
 }
 
+/**
+ * concat
+ * @param liste
+ * @param zweite
+ * @return
+ */
 LinList& operator+(const LinList& liste, const LinList& zweite) {
     LinList* neue1 = new LinList(liste);
     LinList* neue2 = new LinList(zweite);
     neue1->last->setnext(neue2->get_First());
-    //neue2->setFirst(neue1->get_End());
     neue2->first->setprev(neue1->get_End());
     neue1->setLast(neue2->get_End());
-    //neue1->last = neue2->last;
-
-    //neue2->first = neue1->first;
     neue1->size = liste.size + zweite.size;
-    /*for(int i = 1; i <= static_cast<int>(zweite.size); i++) {
-        neue1->push_back(zweite.get(i)->getInhalt());
-    }*/
     return *neue1;
 }
 
+/**
+ * concat and return
+ * @param liste
+ * @return
+ */
 LinList& LinList::operator+=(LinList& liste) {
     this->last->next = liste.first;
     liste.first->previous = this->last;
@@ -185,6 +249,12 @@ LinList& LinList::operator+=(LinList& liste) {
     return *this;
 }
 
+/**
+ * equal
+ * @param liste
+ * @param zweite
+ * @return
+ */
 bool operator==(const LinList& liste, const LinList& zweite) {
     if(liste.size != zweite.size){
         return false;
@@ -197,10 +267,20 @@ bool operator==(const LinList& liste, const LinList& zweite) {
     return true;
 }
 
+/**
+ * not equal
+ * @param liste
+ * @param zweite
+ * @return
+ */
 bool operator!=(const LinList& liste, const LinList& zweite) {
     return !(liste==zweite);
 }
 
+/**
+ * delete
+ * @param stelle
+ */
 void LinList::erase(int stelle){
     if(this->size < 1){
         throw leeresListeExp;
@@ -227,24 +307,25 @@ void LinList::erase(int stelle){
             delete(tmp);
         }
     }
-
 }
 
+/**
+ * delete whole list
+ */
 void LinList::clear() {
 	delete this;
 }
 
-
+/**
+ * outstream
+ * @param stream
+ * @param liste
+ * @return
+ */
 ostream& operator<<(ostream& stream, const LinList& liste) {
     stream << "Listenlaenge: " << liste.size << endl;
     for(int i = 1; i <= liste.size; i++){
         stream << "Element " << i << ": " << liste.get(i)->getInhalt() << endl;
     }
 	return stream;
-}
-
-void LinList::check(bool x, exception e){
-    if(x){
-        throw e;
-    }
 }
