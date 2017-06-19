@@ -17,6 +17,9 @@
  * @date	20.05.2012
  */
 class LinList {
+	friend bool operator== (const LinList& liste, const LinList& zweite);
+	friend bool operator!= (const LinList& liste, const LinList& zweite);
+	friend LinList& operator+ (const LinList& liste, const LinList& zweite);
 public:
 	LinList();
     LinList(const LinList& list);
@@ -26,10 +29,7 @@ public:
 	void pop_back();
 	void pop_front();
     ListElement* operator[](int stelle);
-    void operator+ (LinList liste);
-    LinList operator+= (LinList liste);
-    bool operator== (LinList liste);
-    bool operator!= (LinList liste);
+    LinList& operator+= (LinList& liste);
 	ListElement* get_End() const;
 	ListElement* get_First() const;
     ListElement* get(int stelle) const;
@@ -37,6 +37,12 @@ public:
     void insert(int stelle, InhaltTyp input);
     void erase(int stelle);
     void clear();
+
+	void setFirst(ListElement *first);
+
+	void setLast(ListElement *last);
+
+	friend class ListElement;
 private:
 	size_t size;
     void check(bool x, exception e);

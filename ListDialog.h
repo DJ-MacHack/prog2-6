@@ -13,7 +13,7 @@
 #include <vector>
 #include "LinList.h"
 enum FunktionsTyp {LISTE_ANLEGEN, ELEMENT_EINFUEGEN, LISTE_KOPIEREN, ELEMENT_KOPIEREN, LISTE_LOESCHEN,
-        ELEMENT_LOESCHEN, ENDE = 9};
+        ELEMENT_LOESCHEN, LISTEN_ADDIEREN, ENDE = 9};
 class ListDialog {
 public:
     ListDialog();
@@ -21,7 +21,7 @@ public:
     void start();
     FunktionsTyp einlesenFunktion();
     void ausfuehrenFunktion(FunktionsTyp funktion);
-
+    void vecout();
     virtual ~ListDialog();
 
 

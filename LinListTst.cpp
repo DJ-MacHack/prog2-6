@@ -14,7 +14,7 @@ int main() {
 	LinList liste1;
 	liste1.push_back("alpha");
 	liste1.push_back("beta");
-	cout << liste1 << endl;
+    cout << liste1 << endl;
     cout << "Standardtest fertig - Dialog geoeffnet." << endl;
     ListDialog dialog;
     dialog.start();

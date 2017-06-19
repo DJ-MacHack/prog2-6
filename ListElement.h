@@ -20,12 +20,20 @@ typedef string InhaltTyp;
  * @date	20.05.2012
  */
 class ListElement {
+    friend class LinList;
+    friend class ListDialog;
 public:
 	ListElement(InhaltTyp, ListElement* front, ListElement* next);
     ListElement(const ListElement& element);
 	~ListElement();
-	friend class LinList;
-    friend class ListDialog;
+    void setprev(ListElement* prev);
+    void setnext(ListElement* next);
+    InhaltTyp getInhalt() const;
+
+    ListElement *getPrevious() const;
+
+    ListElement *getNext() const;
+
 private:
 	InhaltTyp inhalt;
 	ListElement* previous;

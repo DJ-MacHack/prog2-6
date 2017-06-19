@@ -19,6 +19,25 @@ ListElement::ListElement(const ListElement &element) {
 
 }
 
+void ListElement::setprev(ListElement *prev) {
+    this->previous=prev;
+}
+
+void ListElement::setnext(ListElement *next) {
+    this->next = next;
+}
+
+ListElement *ListElement::getPrevious() const {
+    return previous;
+}
+
+ListElement *ListElement::getNext() const {
+    return next;
+}
+
+InhaltTyp ListElement::getInhalt() const{
+    return this->inhalt;
+}
 ListElement::~ListElement() {
 	// TODO Auto-generated destructor stub
 }

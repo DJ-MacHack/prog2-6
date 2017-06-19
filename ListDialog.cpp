@@ -52,7 +52,8 @@ FunktionsTyp ListDialog::einlesenFunktion() {
          << ELEMENT_LOESCHEN << ": Element aus der Liste loeschen; "
          << LISTE_KOPIEREN << ": Liste kopieren; "
          <<  ELEMENT_KOPIEREN << ": Element kopieren; "
-         << LISTE_LOESCHEN << ": Liste löschen; "
+         << LISTE_LOESCHEN << ": Liste loeschen; "
+         << LISTEN_ADDIEREN << ": Listen addieren; "
          << ENDE << ": beenden -> ";
     int funktion;
     if (cin) {
@@ -68,11 +69,13 @@ FunktionsTyp ListDialog::einlesenFunktion() {
 void ListDialog::ausfuehrenFunktion(FunktionsTyp funktion) {
     std::string inhalt = "";
     int n, m, p, q;
+    LinList r;
     switch (funktion) {
         case LISTE_ANLEGEN:
             this->vec.push_back(new LinList());
             this->listcount++;
             cout << "Neue Liste im Vector an Stelle " << this->listcount-1 << endl;
+            vecout();
             break;
         case ELEMENT_EINFUEGEN:
             cout << "Listennummer (0 bis n): ";
@@ -86,6 +89,7 @@ void ListDialog::ausfuehrenFunktion(FunktionsTyp funktion) {
             cout << endl;
             this->vec.at(n)->insert(m, inhalt);
             cout << "Element eingefuegt!" << endl;
+            vecout();
             break;
         case ELEMENT_KOPIEREN:
             cout << "Listennummer aus der kopiert wird (0 bis n): ";
@@ -102,6 +106,7 @@ void ListDialog::ausfuehrenFunktion(FunktionsTyp funktion) {
             cout << endl;
             this->vec.at(p)->insert(q, (this->vec.at(n)->get(m)->inhalt));
             cout << "Element kopiert!" << endl;
+            vecout();
             break;
         case ELEMENT_LOESCHEN:
             cout << "Listennummer des Elements (0 bis n): ";
@@ -112,6 +117,7 @@ void ListDialog::ausfuehrenFunktion(FunktionsTyp funktion) {
             cout << endl;
             this->vec.at(n)->erase(m);
             cout << "Element geloescht!" << endl;
+            vecout();
             break;
         case LISTE_KOPIEREN:
             cout << "Listennummer der Liste (0 bis n): ";
@@ -119,6 +125,7 @@ void ListDialog::ausfuehrenFunktion(FunktionsTyp funktion) {
             this->vec.push_back(new LinList(*this->vec.at(n)));
             this->listcount++;
             cout << "Liste wurde kopiert mit Nummer " << this->listcount << endl;
+            vecout();
             break;
         case LISTE_LOESCHEN:
             cout << "Listennummer die geloescht wird (0 bis n): ";
@@ -126,15 +133,32 @@ void ListDialog::ausfuehrenFunktion(FunktionsTyp funktion) {
             cout << endl;
             this->vec.at(n)->clear();
             this->vec.at(n) = nullptr;
-            this->listcount--;
-            //todo this->vec.erase()
-            cout << "Liste gelöscht!" << endl;
+            this->listcount--;              //buggy
+            cout << "Liste geloescht!" << endl;
+            vecout();
+        case LISTEN_ADDIEREN:
+            cout << "Listennummer auf die addiert wird (0 bis n): ";
+            cin >> n;
+            cout << "Listennummer die addiert wird (0 bis n): ";
+            cin >> m;
+            //r = (*(this->vec.at(n)) + *(this->vec.at(m)));
+            this->vec.push_back(&(*(this->vec.at(n)) + *(this->vec.at(m))));
+            this->listcount++;
+            vecout();
+            break;
         case ENDE:
-
+            vecout();
             break;
         default:
             break;
     }
+}
 
+void ListDialog::vecout(){
+    for (int i = 0; i < this->listcount ; ++i) {
+        cout << "Liste " << i << endl;
+        cout << *(this->vec.at(i)) << endl;
+        cout << endl;
+    }
 }
 
