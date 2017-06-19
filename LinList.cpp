@@ -181,6 +181,7 @@ LinList& LinList::operator+=(LinList& liste) {
     this->last->next = liste.first;
     liste.first->previous = this->last;
     this->last = liste.last;
+    this->size += liste.size;
     return *this;
 }
 
