@@ -56,9 +56,6 @@ void ListDialog::start() {
         catch (...) {
             cout << "Unbekannter Fehler Ausfuehren!" << endl;
         }
-        if(funktion == LISTE_LOESCHEN){
-            break;
-        }
     } while (funktion != ENDE);
 
 }
