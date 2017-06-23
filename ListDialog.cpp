@@ -56,6 +56,8 @@ void ListDialog::start() {
         catch (...) {
             cout << "Unbekannter Fehler Ausfuehren!" << endl;
         }
+        if(funktion == LISTE_LOESCHEN)
+            break;
     } while (funktion != ENDE);
 
 }
@@ -158,6 +160,7 @@ void ListDialog::ausfuehrenFunktion(FunktionsTyp funktion) {
             this->listcount--;              //buggy
             cout << "Liste geloescht!" << endl;
             vecout();
+            break;
         case LISTEN_ADDIEREN:
             cout << "Listennummer auf die addiert wird (0 bis n): ";
             cin >> n;
